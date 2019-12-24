@@ -1,0 +1,15 @@
+#Attribute: a property that further defines a class
+
+#Method: function within a class which can access all the attributes of a class and perform a specific task
+
+#Class Attribute: attributes that are shared across all instances of a class. They are created either as a part of the class or by using className.attributeName
+
+#Instance Attribute: attributes that are specific to each instance of a class. They are created using objectName.attributeName
+
+#Self Parameter: the method call objectName.methodName() is interpreted as className.methodName(objectName) and this parameter is referred to as "self" in method definition
+
+#Instance Method: methods that have the default parameter as the object are static methods. They are used to modify the instance attributes of a class
+
+#Static Method: Methods that do not modify the instance attributes of a class are called instance methods. They can still be used to modify class attributes
+
+#init() Method: the initializer in Python. It is called when an object is instantiated. All attributes of the class should be initialized in this method to make your object a fully initialized object
