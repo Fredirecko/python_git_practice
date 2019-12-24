@@ -23,9 +23,9 @@ class Employee:
     
     def hasAchievedTarget(self):
         if self.salesMadeThisWeek >= 5:
-            print("Targe has been achieved")
+            print("Target has been achieved")
         else:
-            print("Targe has not been achieved")
+            print("Target has not been achieved")
 
 # Object
 employeeOne = Employee()
@@ -46,7 +46,18 @@ employeeJoe = Business()
 Business.numberOfWorkingHours = 45
 
 # An Instance Attribute is an attribute that is specific to each instance of your Class
-employeeJoe.name = "John"
+employeeJoe.name = "Joe"
+#This class attribute "name" is created only for the object "employeeJoe" and not for "employeeSame"
+
+# Instance Attributes takes precedence over any existing Class Attributes
+
+
+
+
+
+
+
+
 
     
     
