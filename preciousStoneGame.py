@@ -43,7 +43,19 @@ class SearchPreciousStones:
             
     def examinePouch(self):
         
+        if len(self.pouch) >= 6:
+            print("You can only have five precious stones. You discarded a " + self.pouch[0] + " stone.")
+            self.pouch = self.pouch[1:]
+            
         print(self.pouch)
+    
+    
+    
+            
+        
+        
+        
+        
 
         
         
