@@ -10,12 +10,12 @@ print("Hello World!")
 
 #Classes and Objects
 #Classes - logical collection of attributes and methods
-#Objects - instances of class
+#Objects - instances of a class
 
 # Noun=>Class  Adjective=>Attributes  Verb=>Method
 
 #Example - check if an employee has achieved his weekly target or not
-
+#Class
 class Employee:
     name = "Ben"
     designation = "Sales Executive"
@@ -27,6 +27,7 @@ class Employee:
         else:
             print("Targe has not been achieved")
 
+# Object
 employeeOne = Employee()
 employeeOne.name
 
