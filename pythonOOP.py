@@ -1,4 +1,4 @@
-#Object Orienting Programming
+ #Object Orienting Programming
 # 1. Abstraction
 # 2. Encapsulation
 # 3. Inheritance
@@ -30,5 +30,35 @@ class Employee:
 # Object
 employeeOne = Employee()
 employeeOne.name
+
+#Class Example
+class Business:
+    numberOfWorkingHours = 40
+    
+
+# Create Object of Class Business
+
+employeeSam = Business()
+employeeJoe = Business()
+
+# Changing a Class Attribute - ex: change number of working hours from 40 to 45
+
+Business.numberOfWorkingHours = 45
+
+# An Instance Attribute is an attribute that is specific to each instance of your Class
+employeeJoe.name = "John"
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 
