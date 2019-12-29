@@ -25,6 +25,7 @@ trainee = Trainee()
 trainee.setNumberOfWorkingHours()
 print("Number of working hours of trainee: ", end = " ")
 trainee.displayNumberOfWorkingHours()
+
 trainee.resetNumberOfWorkingHours()
 print("Number of working hours of trainee after reset: ", end = " ")
 trainee.displayNumberOfWorkingHours()
