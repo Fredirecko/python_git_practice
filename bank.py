@@ -25,11 +25,16 @@ class Bank:
         self.deposit = int(input())
 
         print(" ")
-        print("Here is your new account number: {}. Please write it down.".format(self.accountNumber))
+        print("Here is your new account number: {}. Please write it down. Once you have finished enter 1 to continue".format(self.accountNumber))
         print(" ")
-
-        self.accountDetails = [self.name, self.deposit, self.accountNumber]
         
+        
+        
+        
+        self.continueInput = input()
+        if self.continueInput == 1:
+            pass
+        self.accountDetails = [self.name, self.deposit, self.accountNumber]
         return self.accountDetails
     
     def existingAccount(self, newDetails):
@@ -61,29 +66,43 @@ class Bank:
             while True:
                 print("Enter 1 to withdraw.")
                 print("Enter 2 to deposit.")
-                print("Enter 3 to exit.")
+                print("Enter 3 to see account balance.")
+                print("Enter 4 to return to main menu.")
                 print(" ")
-            
-                self.inputHere = int(input())
-                if self.inputHere == 1:
-                    print(" ")
-                    print("Enter amount to withdraw: ")
-                    amount = int(input())
-                    if amount > self.accountInformation[1]:
+                
+                try:
+                    self.inputHere = int(input())
+                    if self.inputHere == 1:
                         print(" ")
-                        print("I'm sorry that amount exceeds your current balance.")
+                        print("Enter amount to withdraw: ")
+                        self.amount = int(input())
+                        if self.amount > self.accountInformation[1]:
+                            print(" ")
+                            print("I'm sorry that amount exceeds your current balance.")
+                            print(" ")
+                        else:
+                            self.accountInformation[1] = self.accountInformation[1] - self.amount
+                            print(" ")
+                            print("Your amount has been transferred. Thank you!")
+                            print(" ")
                         print(" ")
+                    elif self.inputHere == 2:
+                        print(" ")
+                        print("Enter the amount you would like to deposit.")
+                        print(" ")
+                        self.amount = int(input())
+                        self.accountInformation[1] = self.amount + self.accountInformation[1]
+                    elif self.inputHere == 3:
+                        print(" ")
+                        print(self.accountInformation[1])
+                        print(" ")
+                    elif self.inputHere == 4:
+                        break
                     else:
-                        self.accountInformation[1] = amount
                         print(" ")
-                        print("Your amount has been transferred. Thank you!")
+                        print("Please enter a valid input. Thank you.")
                         print(" ")
-                    print(" ")
-                elif self.inputHere == 2:
-                    pass
-                elif self.inputHere == 3:
-                    quit()
-                else:
+                except ValueError:
                     print(" ")
                     print("Please enter a valid input. Thank you.")
                     print(" ")
@@ -97,7 +116,7 @@ import random
 user = Bank()
 
 print(" ")
-print("Welcome to the banking system.")
+print("Welcome to The Banking System.")
 print(" ")
 
 while True:
@@ -112,15 +131,24 @@ while True:
     print("Enter 3: Quit")
     print(" ")
     
-    newOrExisting = int(input())
-
-    if newOrExisting == 1:
-        newDetails = user.newAccount()
-    elif newOrExisting == 2:
-        user.existingAccount(newDetails)
-    elif newOrExisting == 3:
-        quit()
-    elif newOrExisting != 1 or 2 or 3:
+    
+    try:
+        newOrExisting = int(input())
+        
+        if newOrExisting == 1:
+            newDetails = user.newAccount()
+        elif newOrExisting == 2:
+            user.existingAccount(newDetails)
+        elif newOrExisting == 3:
+            print(" ")
+            print("Thank you for choosing The Banking System for your banking needs.")
+            print(" ")
+            quit()
+        else:
+            print(" ")
+            print("Please enter a valid input. Thank you.")
+            print(" ")
+    except ValueError:
         print(" ")
         print("Please enter a valid input. Thank you.")
         print(" ")
